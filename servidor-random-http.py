@@ -27,6 +27,6 @@ while True:
 	print ('HTTP request received:')
 	print (recvSocket.recv(1024))
 	recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n" +
-			"<html><body><h1><a href= http://localhost:8080/"+str(numero_random)+">Enlace</a></h1></body></html>" +
-			"\r\n","utf-8"))
+			"<html><body><h1>Hola. <a href= http://localhost:8080/"+str(numero_random)+">Dame otra''</a></h1></body></html>" +
+			"\r\n", "utf-8"))
 	recvSocket.close()
