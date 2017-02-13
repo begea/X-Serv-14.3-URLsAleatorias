@@ -1,6 +1,4 @@
-#!/usr/bin/python
-
-# Borja Egea Madrid
+#!/usr/bin/python3
 
 """
 Simple HTTP Server
@@ -23,11 +21,11 @@ mySocket.listen(5)
 # El Puerto esta alojado en la possicion 2 de address.
 
 while True:
-	print 'Waiting for connections'
+	print ('Waiting for connections')
 	(recvSocket, address) = mySocket.accept()
 	numero_random = random.randint(0,10000000)
-	print 'HTTP request received:'
-	print recvSocket.recv(1024)
+	print ('HTTP request received:')
+	print (recvSocket.recv(1024))
 	recvSocket.send("HTTP/1.1 200 OK\r\n\r\n" +
 			"<html><body><h1><a href= http://localhost:8080/"+str(numero_random)+">Enlace</a></h1></body></html>" +
 			"\r\n")
